@@ -8,8 +8,8 @@ describe 'DeckAPI' do
     expect(version).to eq '0.0.1'
   end
 
-  it 'is polite' do
-    message = DeckAPI.hi
-    expect(message).to eq 'Hello world!'
+  it 'uses a Client to perform requests' do
+    client = DeckAPI::CLIENT
+    expect(client).not_to eq nil
   end
 end

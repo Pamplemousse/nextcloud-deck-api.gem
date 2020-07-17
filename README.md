@@ -5,6 +5,29 @@ Interact with the [Deck application for Nextcloud](https://apps.nextcloud.com/ap
 
 Implementation based on [Deck's API documentation](https://deck.readthedocs.io/en/latest/API/).
 
+## How to use
+
+Assuming the following environment variable are set:
+  * `DECK_API_USERNAME`: The name of the Nextcloud user to use to access the Deck application;
+  * `DECK_API_PASSWORD`: The password associated with the aforementioned user;
+  * `DECK_API_DOMAIN`: The domain where the Nextcloud instance is accessible at.
+
+```ruby
+require 'nextcloud-deck-api'
+
+# get the list of the boards
+boards = DeckAPI::Boards.get
+
+# get the list of stacks of the board of id 42
+stacks = DeckAPI::Stacks.get 42
+
+# add a card to the stack of id 43 of the board of id 42
+card = Card(title: 'Title of the card'
+            description: 'A description of what this card is about',
+            board_id: 42,
+            stack_id: 43)
+DeckAPI::Cards.create card
+```
 
 ## Development
 
