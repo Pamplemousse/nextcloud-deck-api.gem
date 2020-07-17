@@ -14,6 +14,9 @@ bundle exec rake install
 
 # run the tests
 bundle exec rake spec
+
+# lint the code
+bundle exec rake rubocop
 ```
 
 ## Code of Conduct
