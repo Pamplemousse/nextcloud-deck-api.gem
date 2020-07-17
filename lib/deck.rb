@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'deck/board'
 require 'deck/card'
 require 'deck/stack'

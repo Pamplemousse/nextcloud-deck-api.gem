@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'dry-struct'
 require 'json'
 
 require 'deck/card'
-
 
 module Types
   include Dry.Types()

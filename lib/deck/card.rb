@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'dry-struct'
 require 'json'
-
 
 module Types
   include Dry.Types()
@@ -12,8 +13,11 @@ class Card < Dry::Struct
   attribute :description, Types::String
   attribute :title, Types::String
 
-  def to_json
-    {title: self.title,
-     description: self.description}.to_json
+  attribute :board_id, Types::Integer.meta(omittable: true)
+  attribute :stack_id, Types::Integer.meta(omittable: true)
+
+  def to_json(_ = nil)
+    { title: title,
+      description: description }.to_json
   end
 end

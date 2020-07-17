@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'deck/board'
 require 'stubs/json/board'
-
 
 describe 'Board' do
   describe 'deserialization from json' do

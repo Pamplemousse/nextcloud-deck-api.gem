@@ -1,5 +1,6 @@
-require 'deck'
+# frozen_string_literal: true
 
+require 'deck'
 
 describe 'Deck' do
   it 'exposes a Board class' do

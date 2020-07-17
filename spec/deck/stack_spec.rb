@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'deck/stack'
 require 'stubs/json/stack'
-
 
 describe 'Stack' do
   describe 'deserialization from json' do

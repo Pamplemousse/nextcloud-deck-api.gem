@@ -1,5 +1,6 @@
-require 'deck/card'
+# frozen_string_literal: true
 
+require 'deck/card'
 
 describe 'Card' do
   describe 'serialization to json' do
@@ -8,7 +9,7 @@ describe 'Card' do
 
       serialized_card = card.to_json
 
-      json = "{\"title\":\"new task\",\"description\":\"do something specific\"}"
+      json = '{"title":"new task","description":"do something specific"}'
 
       expect(serialized_card).to eq json
     end
