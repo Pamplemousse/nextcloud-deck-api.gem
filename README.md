@@ -5,6 +5,8 @@ Interact with the [Deck application for Nextcloud](https://apps.nextcloud.com/ap
 
 Implementation based on [Deck's API documentation](https://deck.readthedocs.io/en/latest/API/).
 
+**Disclaimer: This is very much a work-in-progress that does not cover all the features of the API!**
+
 ## How to use
 
 Assuming the following environment variable are set:
