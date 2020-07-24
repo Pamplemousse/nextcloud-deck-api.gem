@@ -5,26 +5,24 @@ require 'json'
 
 require 'deck/card'
 
-module Types
-  include Dry.Types()
-end
+module Deck
+  class Stack < Dry::Struct
+    transform_keys(&:to_sym)
 
-class Stack < Dry::Struct
-  transform_keys(&:to_sym)
+    attribute :id, Types::Integer
+    attribute :cards, Types::Array.of(Card)
+    attribute :title, Types::String
 
-  attribute :id, Types::Integer
-  attribute :cards, Types::Array.of(::Card)
-  attribute :title, Types::String
+    def self.from_json(json)
+      data = JSON.parse json
 
-  def self.from_json(json)
-    data = JSON.parse json
-
-    if data.class == Array
-      data.map do |datum|
-        Stack.new(datum)
+      if data.class == Array
+        data.map do |datum|
+          Stack.new(datum)
+        end
+      else
+        Stack.new(data)
       end
-    else
-      Stack.new(data)
     end
   end
 end

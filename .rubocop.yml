@@ -5,6 +5,7 @@ Metrics/BlockLength:
 
 Naming/FileName:
   Exclude:
+    - lib/deck-api.rb
     - lib/nextcloud-deck-api.rb
     - spec/nextcloud-deck-api_spec.rb
 

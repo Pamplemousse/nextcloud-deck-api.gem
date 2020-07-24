@@ -3,21 +3,19 @@
 require 'dry-struct'
 require 'json'
 
-module Types
-  include Dry.Types()
-end
+module Deck
+  class Card < Dry::Struct
+    transform_keys(&:to_sym)
 
-class Card < Dry::Struct
-  transform_keys(&:to_sym)
+    attribute :description, Types::String
+    attribute :title, Types::String
 
-  attribute :description, Types::String
-  attribute :title, Types::String
+    attribute :board_id, Types::Integer.meta(omittable: true)
+    attribute :stack_id, Types::Integer.meta(omittable: true)
 
-  attribute :board_id, Types::Integer.meta(omittable: true)
-  attribute :stack_id, Types::Integer.meta(omittable: true)
-
-  def to_json(_ = nil)
-    { title: title,
-      description: description }.to_json
+    def to_json(_ = nil)
+      { title: title,
+        description: description }.to_json
+    end
   end
 end

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
+lib = File.join(File.dirname(__FILE__), 'lib')
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'nextcloud-deck-api'
+require 'deck-api/version'
 
 Gem::Specification.new do |s|
   s.name = 'nextcloud-deck-api'

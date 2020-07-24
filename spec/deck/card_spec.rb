@@ -2,16 +2,18 @@
 
 require 'deck/card'
 
-describe 'Card' do
-  describe 'serialization to json' do
-    it 'can serialize a single card' do
-      card = Card.new(title: 'new task', description: 'do something specific')
+module Deck
+  describe 'Card' do
+    describe 'serialization to json' do
+      it 'can serialize a single card' do
+        card = Card.new(title: 'new task', description: 'do something specific')
 
-      serialized_card = card.to_json
+        serialized_card = card.to_json
 
-      json = '{"title":"new task","description":"do something specific"}'
+        json = '{"title":"new task","description":"do something specific"}'
 
-      expect(serialized_card).to eq json
+        expect(serialized_card).to eq json
+      end
     end
   end
 end

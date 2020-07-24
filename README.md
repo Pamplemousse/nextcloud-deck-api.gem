@@ -18,17 +18,17 @@ Assuming the following environment variable are set:
 require 'nextcloud-deck-api'
 
 # get the list of the boards
-boards = DeckAPI::Boards.get
+boards = DeckAPI::API::Boards.get
 
 # get the list of stacks of the board of id 42
-stacks = DeckAPI::Stacks.get 42
+stacks = DeckAPI::API::Stacks.get 42
 
 # add a card to the stack of id 43 of the board of id 42
-card = Card(title: 'Title of the card'
-            description: 'A description of what this card is about',
-            board_id: 42,
-            stack_id: 43)
-DeckAPI::Cards.create card
+card = Deck::Card(title: 'Title of the card'
+                  description: 'A description of what this card is about',
+                  board_id: 42,
+                  stack_id: 43)
+DeckAPI::API::Cards.create card
 ```
 
 ## Development
