@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'nextcloud-deck-api'
 require 'pry'
 
 ENV['APPLICATION_MODE'] = 'test'
