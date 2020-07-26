@@ -13,3 +13,12 @@ install: bundle install
 script:
   - bundle exec rake rubocop
   - bundle exec rake spec
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: sogNBxeCdmJA+CY6/VVKoXlaWw64scBIqcReu7JNRR3MTGQyxNPwKPfSunR1sbr8FspxJAM22+asUCGoHDA5Kb6wkAAeMYLeBjKbwqPDsPxGNlhpDMO5lRNBuFDw0pvu9c/4AAhq1aySqhqHXxNAsdsRBdN3HuiBu9UKu4YAvBpEU+ebKi6i5BMIBue22buaN3WG1pMrMk14pBESHX6Lzf4fjqiEYh8KfPPqmcAQggNA/EykzPVT2lG4fGDskwW21UB4yfjSE63IBheewecxNOjajUp9/RcmLhNfE1GFFQsaTfRBQUqqDnb/TcsbsllWOdUkXUdoB1sU9ERtSVFSOBdoTHYChogxA2ujprG57UBAUx9ecf75AyBd2lVi4i6oIvaMvBjtNyArnkIFSBvz1rnaOW7PnXaDLDIhWiTvLTgWsM4hofwRBexBT7OCK17QTUx2b+GWp5Tj5pmjBQJPbiA6z/CVbELWyi+ck+XFHSBTlcgKsF6Ja/Jwf/4H8YI4B8uXsAn64mhq/F/jBm6SdTie9HgW8P70c6PNIrlrmCyzz1moBtBXRHm0EYfq1oCj0uqws4KWK9yNS8+PFMu1DHJ4e4DxtdypNxIwbGH8b5H0e9Y9a5jB7W8KgDR7i4NoFOMjE2aioeHNVj91c8YPks4pSTWksSzO65oKKlVQFfk=
+  gem: nextcloud-deck-api
+  on:
+    tags: true
+    repo: Pamplemousse/nextcloud-deck-api.gem
