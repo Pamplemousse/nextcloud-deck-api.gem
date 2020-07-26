@@ -2,8 +2,12 @@
 
 require 'dry-struct'
 
-module Types
-  include Dry.Types()
+# The representation of Deck entities.
+module Deck
+  # Allow typing for {https://rubydoc.info/gems/dry-struct/Dry/Struct Dry::Struct}s
+  module Types
+    include Dry.Types()
+  end
 end
 
 require 'deck/board'

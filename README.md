@@ -1,6 +1,7 @@
 # nextcloud-deck-api
 
 ![](https://api.travis-ci.org/Pamplemousse/nextcloud-deck-api.gem.svg?branch=master)
+![](https://inch-ci.org/github/pamplemousse/nextcloud-deck-api.gem.svg?branch=master)
 
 Interact with the [Deck application for Nextcloud](https://apps.nextcloud.com/apps/deck) using Ruby.
 
@@ -18,7 +19,7 @@ Assuming the following environment variable are set:
 ```ruby
 require 'nextcloud-deck-api'
 
-# get the list of the boards
+# get the list of boards
 boards = DeckAPI::API::Boards.get
 
 # get the list of stacks of the board of id 42
@@ -35,6 +36,9 @@ DeckAPI::API::Cards.create card
 ## Development
 
 ```
+# install the dependencies
+bundle install
+
 # build and install the gem locally
 bundle exec rake install
 
@@ -43,6 +47,9 @@ bundle exec rake spec
 
 # lint the code
 bundle exec rake rubocop
+
+# build and (locally) serve the documentation
+bundle exec rake doc
 ```
 
 ## Code of Conduct

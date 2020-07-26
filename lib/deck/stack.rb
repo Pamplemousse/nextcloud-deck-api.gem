@@ -6,6 +6,8 @@ require 'json'
 require 'deck/card'
 
 module Deck
+  # Represent a stack in the Deck application.
+  # @see https://deck.readthedocs.io/en/latest/User_documentation_en/
   class Stack < Dry::Struct
     transform_keys(&:to_sym)
 
@@ -13,6 +15,8 @@ module Deck
     attribute :cards, Types::Array.of(Card)
     attribute :title, Types::String
 
+    # @param json [String] A serialized stack.
+    # @return [Stack] A new instance of a {Stack} filled with the given data.
     def self.from_json(json)
       data = JSON.parse json
 

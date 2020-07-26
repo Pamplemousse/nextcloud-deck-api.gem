@@ -9,9 +9,5 @@ Naming/FileName:
     - lib/nextcloud-deck-api.rb
     - spec/nextcloud-deck-api_spec.rb
 
-# TODO: reenable later
-Style/Documentation:
-  Enabled: false
-
 Style/WordArray:
   Enabled: false
