@@ -5,7 +5,7 @@ require 'nextcloud-deck-api'
 describe 'DeckAPI' do
   it 'has a version' do
     version = DeckAPI::VERSION
-    expect(version).to eq '0.0.1'
+    expect(version).not_to eq nil
   end
 
   it 'uses a Client to perform requests' do
