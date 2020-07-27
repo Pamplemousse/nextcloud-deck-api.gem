@@ -1,7 +1,7 @@
 # nextcloud-deck-api
 
-![](https://api.travis-ci.org/Pamplemousse/nextcloud-deck-api.gem.svg?branch=master)
-![](https://inch-ci.org/github/pamplemousse/nextcloud-deck-api.gem.svg?branch=master)
+[![](https://api.travis-ci.org/Pamplemousse/nextcloud-deck-api.gem.svg?branch=master)](https://travis-ci.org/Pamplemousse/nextcloud-deck-api.gem)
+[![](https://inch-ci.org/github/pamplemousse/nextcloud-deck-api.gem.svg?branch=master)](https://inch-ci.org/github/pamplemousse/nextcloud-deck-api.gem)
 
 Interact with the [Deck application for Nextcloud](https://apps.nextcloud.com/apps/deck) using Ruby.
 
