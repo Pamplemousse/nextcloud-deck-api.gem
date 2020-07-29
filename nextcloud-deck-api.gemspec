@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.authors = ['Pamplemousse']
   s.email = 'xavier.maso@net-c.com'
   s.files = Dir['lib/**/*.rb']
-  s.homepage = 'https://github.com/Pamplemousse/nextcloud-deck-api'
+  s.homepage = 'https://github.com/Pamplemousse/nextcloud-deck-api.gem'
   s.license = 'MIT'
 
   s.add_runtime_dependency 'dry-struct', '~> 1.3'
