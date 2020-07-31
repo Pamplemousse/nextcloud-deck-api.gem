@@ -11,7 +11,7 @@ Implementation based on [Deck's API documentation](https://deck.readthedocs.io/e
 
 ## How to use
 
-Assuming the following environment variable are set:
+The following environment variables need to be set:
   * `DECK_API_USERNAME`: The name of the Nextcloud user to use to access the Deck application;
   * `DECK_API_PASSWORD`: The password associated with the aforementioned user;
   * `DECK_API_DOMAIN`: The domain where the Nextcloud instance is accessible at.
